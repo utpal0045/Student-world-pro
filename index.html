@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Student World - study resources, student tools, career and scholarship links.">
+  <title>STUDENT WORLD | Learn Everything</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Student World Home">STUDENT <span>WORLD 🌍</span></a>
+    <div class="top-actions">
+      <button id="languageBtn" class="outline-btn" type="button">অসমীয়া</button>
+      <button id="themeBtn" class="outline-btn" type="button">🌙 Theme</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow" data-en="YOUR LEARNING HUB" data-as="তোমাৰ শিক্ষাৰ পৃথিৱী">YOUR LEARNING HUB</p>
+    <h1 data-en-html="Learn Today.<br><span>Lead Tomorrow.</span>" data-as-html="আজি শিকা।<br><span>কাইলৈ আগবাঢ়া।</span>">Learn Today.<br><span>Lead Tomorrow.</span></h1>
+    <p class="hero-copy" data-en="Study resources, student tools and opportunities — all in one place." data-as="পঢ়া-শুনাৰ সামগ্ৰী, শিক্ষাৰ্থীৰ সঁজুলি আৰু সুযোগ—একে ঠাইতে।">Study resources, student tools and opportunities — all in one place.</p>
+    <form id="searchForm" class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search study, AI, scholarship, career..." aria-label="Search sections">
+      <button class="gold-btn" type="submit">Search</button>
+    </form>
+    <p class="hero-note" data-en="Free starter website • Mobile friendly" data-as="বিনামূলীয়া আৰম্ভণিৰ ৱেবছাইট • মোবাইল-উপযোগী">Free starter website • Mobile friendly</p>
+  </section>
+
+  <main class="container">
+    <section id="searchPanel" class="panel hidden">
+      <h2 data-en="Search results" data-as="সন্ধানৰ ফলাফল">Search results</h2>
+      <div id="searchResults" class="quick-results"></div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" data-en="STUDENT DASHBOARD" data-as="শিক্ষাৰ্থীৰ ডেশ্বব’ৰ্ড">STUDENT DASHBOARD</p>
+          <h2 data-en-html="Everything you need, <span>in one place.</span>" data-as-html="প্ৰয়োজনীয় সুবিধা, <span>একে ঠাইতে।</span>">Everything you need, <span>in one place.</span></h2>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card"><div class="icon">📚</div><h3 data-en="Study Centre" data-as="অধ্যয়ন কেন্দ্ৰ">Study Centre</h3><p data-en="Sample notes and learning topics." data-as="নমুনা টোকা আৰু অধ্যয়নৰ বিষয়।">Sample notes and learning topics.</p><button class="card-btn" data-open="study" type="button" data-en="Open" data-as="খোলা">Open</button></article>
+        <article class="feature-card"><div class="icon">🤖</div><h3 data-en="AI Assistant" data-as="AI সহায়ক">AI Assistant</h3><p data-en="Ask a question and try the demo answers." data-as="প্ৰশ্ন সোধা আৰু নমুনা উত্তৰ চেষ্টা কৰা।">Ask a question and try the demo answers.</p><button class="card-btn" data-open="ai" type="button" data-en="Ask question" data-as="প্ৰশ্ন সোধা">Ask question</button></article>
+        <article class="feature-card"><div class="icon">🎓</div><h3 data-en="Scholarships" data-as="বৃত্তি">Scholarships</h3><p data-en="Visit official scholarship resources." data-as="বৃত্তিৰ চৰকাৰী তথ্যৰ উৎস চোৱা।">Visit official scholarship resources.</p><button class="card-btn" data-open="scholarship" type="button" data-en="Explore" data-as="চোৱা">Explore</button></article>
+        <article class="feature-card"><div class="icon">💼</div><h3 data-en="Career Centre" data-as="কৰ্মজীৱন কেন্দ্ৰ">Career Centre</h3><p data-en="Career and recruitment portals." data-as="কৰ্মজীৱন আৰু নিযুক্তিৰ ৱেবছাইট।">Career and recruitment portals.</p><button class="card-btn" data-open="career" type="button" data-en="Explore" data-as="চোৱা">Explore</button></article>
+        <article class="feature-card"><div class="icon">📝</div><h3 data-en="Quiz" data-as="প্ৰশ্নোত্তৰ">Quiz</h3><p data-en="Practise a few general knowledge questions." data-as="কেইটামান সাধাৰণ জ্ঞানৰ প্ৰশ্নৰ অনুশীলন কৰা।">Practise a few general knowledge questions.</p><button class="card-btn" data-open="quiz" type="button" data-en="Start quiz" data-as="আৰম্ভ কৰা">Start quiz</button></article>
+        <article class="feature-card"><div class="icon">🧮</div><h3 data-en="Calculator" data-as="গণকযন্ত্ৰ">Calculator</h3><p data-en="Calculate marks and percentages." data-as="নম্বৰ আৰু শতকৰা হিচাপ কৰা।">Calculate marks and percentages.</p><button class="card-btn" data-open="calculator" type="button" data-en="Calculate" data-as="হিচাপ কৰা">Calculate</button></article>
+        <article class="feature-card"><div class="icon">📅</div><h3 data-en="Study Planner" data-as="অধ্যয়ন পৰিকল্পনা">Study Planner</h3><p data-en="Keep a simple study task list on this device." data-as="এই ডিভাইচত পঢ়াৰ কামৰ তালিকা ৰাখা।">Keep a simple study task list on this device.</p><button class="card-btn" data-open="planner" type="button" data-en="Plan now" data-as="পৰিকল্পনা কৰা">Plan now</button></article>
+        <article class="feature-card"><div class="icon">🌐</div><h3 data-en="Useful Websites" data-as="উপযোগী ৱেবছাইট">Useful Websites</h3><p data-en="Official education and learning links." data-as="শিক্ষা আৰু অধ্যয়নৰ চৰকাৰী লিংক।">Official education and learning links.</p><button class="card-btn" data-open="websites" type="button" data-en="View links" data-as="লিংক চোৱা">View links</button></article>
+      </div>
+    </section>
+
+    <section id="study" class="panel app-section hidden">
+      <h2>📚 <span data-en="Study Centre" data-as="অধ্যয়ন কেন্দ্ৰ">Study Centre</span></h2>
+      <p data-en="Choose a topic to view a starter note. These are sample notes, not a complete syllabus." data-as="নমুনা টোকা চাবলৈ বিষয় বাছনি কৰা। এইবোৰ সম্পূৰ্ণ পাঠ্যক্ৰম নহয়।">Choose a topic to view a starter note. These are sample notes, not a complete syllabus.</p>
+      <label for="subjectSelect" data-en="Subject" data-as="বিষয়">Subject</label>
+      <select id="subjectSelect">
+        <option value="education">Education / শিক্ষা</option>
+        <option value="sociology">Sociology / সমাজতত্ত্ব</option>
+        <option value="english">English</option>
+        <option value="computer">Computer Science</option>
+      </select>
+      <button id="showNotesBtn" class="gold-btn" type="button">Open notes</button>
+      <div id="notesOutput" class="output hidden" aria-live="polite"></div>
+    </section>
+
+    <section id="ai" class="panel app-section hidden">
+      <h2>🤖 <span data-en="AI Assistant" data-as="AI সহায়ক">AI Assistant</span></h2>
+      <p data-en="This starter version answers a few built-in examples. It is not connected to a live AI service yet." data-as="এই আৰম্ভণিৰ সংস্কৰণে কেইটামান আগতীয়াকৈ দিয়া প্ৰশ্নৰ উত্তৰ দিয়ে। এতিয়াও প্ৰকৃত AI সেৱাৰ সৈতে সংযুক্ত নহয়।">This starter version answers a few built-in examples. It is not connected to a live AI service yet.</p>
+      <textarea id="questionInput" rows="4" placeholder="Ask something about education, socialization, HTML..."></textarea>
+      <div class="button-row"><button id="askBtn" class="gold-btn" type="button">Get demo answer</button><button id="clearQuestionBtn" class="outline-btn" type="button">Clear</button></div>
+      <div id="aiOutput" class="output hidden" aria-live="polite"></div>
+      <p class="small-note">For live AI answers, a backend and an AI provider are required. Never put an API key in this public HTML/JavaScript project.</p>
+    </section>
+
+    <section id="scholarship" class="panel app-section hidden">
+      <h2>🎓 <span data-en="Scholarship Centre" data-as="বৃত্তি কেন্দ্ৰ">Scholarship Centre</span></h2>
+      <p data-en="Use official portals and check current eligibility, deadlines and documents before applying." data-as="আবেদন কৰাৰ আগতে চৰকাৰী পৰ্টেলত যোগ্যতা, অন্তিম তাৰিখ আৰু প্ৰয়োজনীয় নথি-পত্ৰ পৰীক্ষা কৰা।">Use official portals and check current eligibility, deadlines and documents before applying.</p>
+      <div class="link-list">
+        <a href="https://scholarships.gov.in/" target="_blank" rel="noopener">National Scholarship Portal ↗</a>
+        <a href="https://education.gov.in/" target="_blank" rel="noopener">Ministry of Education ↗</a>
+        <a href="https://www.aicte-india.org/" target="_blank" rel="noopener">AICTE ↗</a>
+      </div>
+    </section>
+
+    <section id="career" class="panel app-section hidden">
+      <h2>💼 <span data-en="Career Centre" data-as="কৰ্মজীৱন কেন্দ্ৰ">Career Centre</span></h2>
+      <p data-en="Always verify vacancies and deadlines on the official recruiting organisation's website." data-as="চাকৰিৰ খালী পদ আৰু অন্তিম তাৰিখ সদায় সংশ্লিষ্ট চৰকাৰী ৱেবছাইটত পৰীক্ষা কৰা।">Always verify vacancies and deadlines on the official recruiting organisation's website.</p>
+      <div class="link-list">
+        <a href="https://upsc.gov.in/" target="_blank" rel="noopener">UPSC ↗</a>
+        <a href="https://ssc.gov.in/" target="_blank" rel="noopener">Staff Selection Commission ↗</a>
+        <a href="https://www.ncs.gov.in/" target="_blank" rel="noopener">National Career Service ↗</a>
+      </div>
+    </section>
+
+    <section id="quiz" class="panel app-section hidden">
+      <h2>📝 <span data-en="Quick Quiz" data-as="চমু প্ৰশ্নোত্তৰ">Quick Quiz</span></h2>
+      <p id="quizQuestion"></p>
+      <div id="quizOptions" class="quiz-options"></div>
+      <div id="quizResult" class="output hidden" aria-live="polite"></div>
+      <button id="nextQuizBtn" class="gold-btn" type="button">Next question</button>
+    </section>
+
+    <section id="calculator" class="panel app-section hidden">
+      <h2>🧮 <span data-en="Percentage Calculator" data-as="শতকৰা গণক">Percentage Calculator</span></h2>
+      <label for="obtainedMarks">Obtained marks</label>
+      <input id="obtainedMarks" type="number" min="0" placeholder="e.g. 450">
+      <label for="totalMarks">Total marks</label>
+      <input id="totalMarks" type="number" min="1" placeholder="e.g. 500">
+      <button id="calculateBtn" class="gold-btn" type="button">Calculate</button>
+      <div id="calcOutput" class="output hidden" aria-live="polite"></div>
+    </section>
+
+    <section id="planner" class="panel app-section hidden">
+      <h2>📅 <span data-en="Study Planner" data-as="অধ্যয়ন পৰিকল্পনা">Study Planner</span></h2>
+      <p data-en="Tasks are saved in this browser on this device only." data-as="কামৰ তালিকা কেৱল এই ডিভাইচৰ ব্ৰাউজাৰত সংৰক্ষিত হয়।">Tasks are saved in this browser on this device only.</p>
+      <form id="taskForm" class="task-form">
+        <input id="taskInput" type="text" placeholder="Add a study task..." maxlength="160">
+        <button class="gold-btn" type="submit">Add task</button>
+      </form>
+      <div id="taskList" class="task-list"></div>
+    </section>
+
+    <section id="websites" class="panel app-section hidden">
+      <h2>🌐 <span data-en="Useful Education Websites" data-as="উপযোগী শিক্ষা ৱেবছাইট">Useful Education Websites</span></h2>
+      <div class="link-list">
+        <a href="https://www.ugc.gov.in/" target="_blank" rel="noopener">University Grants Commission ↗</a>
+        <a href="https://www.swayam.gov.in/" target="_blank" rel="noopener">SWAYAM Online Learning ↗</a>
+        <a href="https://epathshala.nic.in/" target="_blank" rel="noopener">ePathshala ↗</a>
+        <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener">National Digital Library of India ↗</a>
+      </div>
+    </section>
+
+    <p class="disclaimer" data-en="Student World is an independent starter project. Verify important academic, scholarship and job information with official sources." data-as="Student World এটা স্বতন্ত্ৰ আৰম্ভণিৰ প্ৰকল্প। গুৰুত্বপূৰ্ণ শিক্ষা, বৃত্তি আৰু চাকৰিৰ তথ্য চৰকাৰী উৎসত পৰীক্ষা কৰিবা।">Student World is an independent starter project. Verify important academic, scholarship and job information with official sources.</p>
+  </main>
+
+  <footer>
+    <strong>STUDENT WORLD 🌍</strong>
+    <p data-en="Learn Today. Lead Tomorrow." data-as="আজি শিকা। কাইলৈ আগবাঢ়া।">Learn Today. Lead Tomorrow.</p>
+    <small>© <span id="year"></span> Student World</small>
+  </footer>
+</body>
+</html>
